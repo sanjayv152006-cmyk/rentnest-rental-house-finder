@@ -1,0 +1,50 @@
+import {
+  Wifi,
+  Car,
+  Snowflake,
+  Zap,
+  ArrowUpDown,
+  Shield,
+  Cctv,
+  Droplets,
+  Dumbbell,
+  Waves,
+  Baby,
+  Trees,
+  ChefHat,
+  WashingMachine,
+  Refrigerator,
+  PawPrint,
+  Sun,
+  Flame,
+  Boxes,
+  PanelTop,
+  type LucideIcon,
+} from 'lucide-react';
+
+const map: Record<string, LucideIcon> = {
+  WiFi: Wifi,
+  Parking: Car,
+  AC: Snowflake,
+  'Power Backup': Zap,
+  Lift: ArrowUpDown,
+  Security: Shield,
+  CCTV: Cctv,
+  'Water Supply': Droplets,
+  Gym: Dumbbell,
+  'Swimming Pool': Waves,
+  'Children Play Area': Baby,
+  Garden: Trees,
+  'Modular Kitchen': ChefHat,
+  'Washing Machine': WashingMachine,
+  Refrigerator: Refrigerator,
+  'Pet Friendly': PawPrint,
+  'Solar Power': Sun,
+  Geyser: Flame,
+  Cupboards: Boxes,
+  Balcony: PanelTop,
+};
+
+export function amenityIcon(name: string): LucideIcon {
+  return map[name] ?? Boxes;
+}
